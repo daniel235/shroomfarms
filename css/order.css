@@ -1,0 +1,28 @@
+#order-body {
+    padding-top: 30%;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-item img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item a:hover {
+    color: #5BCCf6;
+}
+
+.order-box {
+    margin-bottom: 10%;
+}

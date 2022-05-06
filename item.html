@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="./css/item.css"/>
+        
+        <script>
+            $(document).ready(function(){
+                
+                $("#headers").load("header.html");
+                $("#footers").load("footer.html");
+                if($(window).width() > 700){
+                    $("#order-body").css("padding-top", "18%");
+                }
+            });
+        </script>
+        <script src="./js/item.js"></script>
+    </head>
+    <body>
+        <div id="headers"></div>
+        <div class="order-form">
+            <h2>Add to cart!</h2>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="./css/images/oysters.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" id="my-title"></h5>(<i id="bio"></i>)
+                  <p class="card-text"></p>
+                  <p id="money">$9.00 - lb</p>
+                  <input placeholder="qty (lbs)" style="width: 80px">
+                  <a href="#" class="btn btn-primary">Add To Cart</a>
+                  
+                </div>
+              </div>
+        </div>
+        <p id="demo"></p>
+        <div id="footers"></div>
+        <script>
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                let data = JSON.parse(this.responseText);
+                console.log(data);
+                document.getElementById("demo").innerHTML = data.title;
+                document.getElementById("my-title").innerHTML = data.name;
+                document.getElementById("bio").innerHTML = data.bioname;
+                //document.getElementById("money").innerHTML = data.price
+            }
+            //xhttp.open("GET", "https://shroomfarm.herokuapp.com/test", true);
+            xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+            xhttp.send();
+        </script>
+    </body>
+</html>

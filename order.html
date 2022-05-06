@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="./css/order.css"/>
+        <script>
+            $(document).ready(function(){
+                $("#headers").load("header.html");
+                $("#footers").load("footer.html");
+                if($(window).width() > 700){
+                    $("#order-body").css("padding-top", "18%");
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="headers"></div>
+        <div id="order-body">
+            <div class="order-header" style="text-align: center">
+                <h2>Order Today!</h2>
+            </div>
+            <div class="container order-box">
+                <div class="row">
+                    <div class="col col-xs-11 col-sm-12 col-md-4 menu-item">
+                        <a href="item.html">
+                            <strong>Oyster Mushrooms</strong>
+                            <img src="./css/images/oysters.jpg"/>
+                        </a>
+                    </div>
+                    <div class="col col-xs-12 col-sm-12 col-md-4 menu-item">
+                        <a href="#">
+                            <strong>Pink Oyster Mushrooms</strong>
+                            <img src="./css/images/pink-oyster.jpg"/>
+                        </a>
+                    </div>
+                    <div class="col col-xs-12 col-sm-12 col-md-4 menu-item">
+                        <a href="https://shroomfarm.herokuapp.com/test">
+                            <strong>Lions Mane Mushrooms</strong>
+                            <img src="./css/images/lions.jpg"/>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xs-12 col-sm-12 col-md-4 menu-item">
+                        <a href="#">
+                            <strong>Lions Mane Mushrooms</strong>
+                            <img src="./css/images/mushrooms.png"/>
+                        </a>
+                    </div>
+                    <div class="col col-xs-12 col-sm-12 col-md-4 menu-item">
+                        <a href="#">
+                            <strong>Lions Mane Mushrooms</strong>
+                            <img src="./css/images/mushrooms.png"/>
+                        </a>
+                    </div>
+                    <div class="col col-xs-12 col-sm-12 col-md-4 menu-item">
+                        <a href="#">
+                            <strong>Lions Mane Mushrooms</strong>
+                            <img src="./css/images/mushrooms.png"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footers"></div>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mushrooms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link href="css/index.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Mali:wght@300&display=swap" rel="stylesheet">
+        <script>
+            $(document).ready(function(){
+                $("#headers").load("header.html");
+                $("#footers").load("footer.html");
+                if($(window).width() > 700){
+                    $(".section-two").css("margin-top", "45%");
+                    $(".carousel-control-next").css("margin-top", "25%");
+                    $(".carousel-control-prev").css("margin-top", "25%");
+                    $(".socials").css({"width": "8%", "margin-top": "15%"});
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="headers"></div>
+        <div class="section-one">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img id="banner-img" src="./css/images/oyster-mushrooms-front.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img id="banner-img" src="./css/images/mushroom-yellow.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img id="banner-img" src="./css/images/white-mush.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="socials">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/ShroomFarms"><img src="css/images/fb.png"/></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/shroomfarmsrgv/"><img src="css/images/insta.png"/></a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="section-two">
+            <div class="content-two">
+                <h2><strong>Our Mushrooms</strong></h2>
+                <p>Grown locally in Mission, TX.  We grow gourmet mushrooms and medicinal mushrooms.  The mission of our company is to have the RGV locally source mushrooms entirely from the RGV.</p>
+                <p>Why choose Us? We love what we do.  We believe that mushrooms are amazing!  The healing power and benefits that come from a mushroom are so great we had to share!</p>
+                <br>
+            </div>
+        </div>
+        <div class="section-three container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-4 col-md-4 col-xs-12">
+                    <img src="./css/images/oysters.jpg"/>
+                </div>
+                <div class="third col-12 col-sm-12 col-lg-8 col-md-8 col-xs-12">
+                    <h2><strong>Our Process</strong></h2>
+                    <p>We grow on the best substrate a mushroom can have with extra supplements to create the best mushroom's possible.  We sell at local farmers markets, directly to consumer's, and we also deliver to local restaurants.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-four">
+            <div class="fourth container-fluid">
+                <h2><strong>Our Services</strong></h2>
+                <div class="row">
+                    <div class="col-12 service-img col-xs-12 col-sm-12 col-md-4">
+                        <img src="./css/images/delivery.png"/>
+                        <strong>Delivery</strong>
+                    </div>
+                    <div class="col-12 service-img col-xs-12 col-sm-12 col-md-4">
+                        <img src="./css/images/lock.png" style="width: 70%;"/>
+                        <strong>Secure Payments</strong>
+                    </div>
+                    <div class="col-12 service-img col-xs-12 col-sm-12 col-md-4">
+                        <img src="./css/images/bulk.jpg"/>
+                        <strong>Bulk Ordering</strong>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="footers"></div>
+        
+    </body>
+</html>

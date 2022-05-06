@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="./css/contact.css"/>
+        <script>
+            $(document).ready(function(){
+                $("#headers").load("header.html");
+                $("#footers").load("footer.html");
+                if($(window).width() > 700){
+                    $("#contact").css("padding-top", "10%");
+                    $("#contact-body input").css({"width": "25%", "margin-bottom" : "2%"});
+                    $("#contact-body button").css("width", "20%");
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="headers"></div>
+            <div class="about-body">
+                
+            </div>
+        <div id="footers"></div>
+    </body>
+</html>
