@@ -30,7 +30,7 @@
                 <div class="card-body">
                   <h5 class="card-title" id="my-title"></h5>(<i id="bio"></i>)
                   <p class="card-text"></p>
-                  <p id="money">$9.00 - lb</p>
+                  <span><p id="money"></p> - lb</span>
                   <input placeholder="qty (lbs)" style="width: 80px">
                   <a href="#" class="btn btn-primary">Add To Cart</a>
                   
@@ -47,13 +47,17 @@
             xhttp.onload = function() {
                 let data = JSON.parse(this.responseText);
                 console.log(data);
+                data = data[0];
                 document.getElementById("demo").innerHTML = data.title;
                 document.getElementById("my-title").innerHTML = data.name;
                 document.getElementById("bio").innerHTML = data.bioname;
+                document.getElementById("money").innerHTML = data.price;
+                document.getElementsByClassName("card-text").innerHTML = data.info;
+                
                 //document.getElementById("money").innerHTML = data.price
             }
-            //xhttp.open("GET", "https://shroomfarm.herokuapp.com/test", true);
-            xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+            xhttp.open("GET", "https://shroomfarm.herokuapp.com/order?name=" + product, true);
+            //xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
             xhttp.send();
         </script>
     </body>
