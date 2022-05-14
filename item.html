@@ -40,6 +40,9 @@
         <p id="demo"></p>
         <div id="footers"></div>
         <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const product = urlParams.get('name');
             const xhttp = new XMLHttpRequest();
             xhttp.onload = function() {
                 let data = JSON.parse(this.responseText);
